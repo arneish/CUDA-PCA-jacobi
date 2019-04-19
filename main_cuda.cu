@@ -56,6 +56,8 @@ int main(int argc, char const *argv[])
 	V_T = (double*) malloc(sizeof(double) * M*M);
 
 	cudaEvent_t start, stop;
+	cudaEventCreate(&start);
+	cudaEventCreate(&stop);
 	cudaEventRecord(start);
 	
 	// /*
