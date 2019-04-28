@@ -177,17 +177,22 @@ double s_upper_triangular_sum(double *A, int P)
     return sqrt(sum);
 }
 
-
 void SVD_and_PCA(int N,
                  int P,
                  double *D,
                  double **U,
                  double **SIGMA,
                  double **V_T,
+                 int *SIGMAm,
+                 int *SIGMAn,
                  double **D_HAT,
                  int *K,
                  int retention)
 {
+    *SIGMAm = P;  *SIGMAn = N;
+	*U = (double*) malloc(sizeof(double) * P*P);
+	*SIGMA = (double*) malloc(sizeof(double) * P);
+	*V_T = (double*) malloc(sizeof(double) * N*N);
     /*1.Perform SVD for D_T*/
     // Get eigen-values & eigen-vectors for D_T*D
     double *D_T = (double *)malloc(sizeof(double) * P * N);
