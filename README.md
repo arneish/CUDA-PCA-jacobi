@@ -1,5 +1,5 @@
 # Overview 
-- **Contains: A (fairly) optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations)** 
+- **Contains: *A (fairly) optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations)*** 
 - **Input Data: Works on Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)**
 - CUDA C file: *lab3_cuda.cu*
 - I/O: I/O format can be understood from the included header files and sample testcase files.
