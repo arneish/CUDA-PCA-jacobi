@@ -1,3 +1,15 @@
+# Overview 
+- Contains: Parallel Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations) 
+- I/O: Input/Output format can be understood from the relevant header files and sample testcase files.
+- Input Data: Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)
+- CUDA C file: *labe3_cuda.cu*
+- Primary Reference: Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]
+- All literature references used included in repository. 
+
+# Declaration 
+- This programming assignment was undertaken by the owner as a part of course requirements in COL380: Introduction to Parallel Programming and Distributed Computer (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
+- The problem statement is included. The following sections describe how to use the codes.
+
 # col380_lab3_suite
 Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
 
