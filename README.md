@@ -11,7 +11,7 @@
 
 # Problem Statement & Starter Codes: col380_lab3_suite
 - Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
-- Cloned from: github.com/dvynjli/col380_lab3_suite/
+- Cloned from: https://github.com/dvynjli/col380_lab3_suite/
 
 ## Directories and files
 `testcase/`: contains python script `gen_testcase.py` for sample testcase generation  
