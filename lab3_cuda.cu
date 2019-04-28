@@ -3,9 +3,9 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <string.h>
-//#include <time.h>
-// #include <chrono>
-// using namespace std::chrono;
+#include <time.h>
+#include <chrono>
+using namespace std::chrono;
 
 #define EPSILON 1e-4
 #define THRESHOLD 1e-4
