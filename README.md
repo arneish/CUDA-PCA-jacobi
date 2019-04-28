@@ -6,7 +6,7 @@
 - **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
 - Wiki reference: https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm
 - All literature references used included in repository. 
-- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
+- This programming assignment was undertaken by the owner in March 2019 as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
 - The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
 # Problem Statement & Starter Codes: col380_lab3_suite
