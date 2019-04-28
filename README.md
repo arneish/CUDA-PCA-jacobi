@@ -7,7 +7,7 @@
 - All literature references used included in repository. 
 
 # Declaration 
-- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computer (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
+- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
 - The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
 # STARTER CODES & PROBLEM STATEMENTS: col380_lab3_suite
