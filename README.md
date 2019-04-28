@@ -9,7 +9,7 @@
 - This programming assignment was undertaken by the owner in March 2019 as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
 - The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
-# Problem Statement & Starter Codes: col380_lab3_suite
+## Problem Statement & Starter Codes: col380_lab3_suite
 - Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
 - Cloned from: https://github.com/dvynjli/col380_lab3_suite/
 
