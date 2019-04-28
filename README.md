@@ -4,6 +4,7 @@
 - CUDA C file: *lab3_cuda.cu*
 - I/O: I/O format can be understood from the included header files and sample testcase files.
 - **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
+- Wiki reference: https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm
 - All literature references used included in repository. 
 
 # Declaration 
