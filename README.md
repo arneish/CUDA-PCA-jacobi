@@ -1,7 +1,3 @@
-# Declaration 
-- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
-- The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
-
 # Overview 
 - **Contains: A (fairly) optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations)** 
 - **Input Data: Works on Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)**
@@ -10,6 +6,8 @@
 - **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
 - Wiki reference: https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm
 - All literature references used included in repository. 
+- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
+- The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
 # Problem Statement & Starter Codes: col380_lab3_suite
 - Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
