@@ -1,17 +1,17 @@
 # Overview 
-- Contains: A fairly-optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations) 
+- **Contains: A (fairly) optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations)** 
+- **Input Data: Works on Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)**
+- CUDA C file: *lab3_cuda.cu*
 - I/O: I/O format can be understood from the included header files and sample testcase files.
-- Input Data: Works on Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)
-- CUDA C file: *labe3_cuda.cu*
-- Primary Reference: Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]
+- **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
+- Wiki reference: https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm
 - All literature references used included in repository. 
+- This programming assignment was undertaken by the owner in March 2019 as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
+- The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
-# Declaration 
-- This programming assignment was undertaken by the owner as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computer (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi in March 2019. 
-- The problem statement is included. The following sections describe the how to use the codes.
-
-# col380_lab3_suite
-Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
+## Problem Statement & Starter Codes: col380_lab3_suite
+- Problem Statement: Implement Principal Component Analysis with Singular Vector Decomposition in CUDA
+- Cloned from: https://github.com/dvynjli/col380_lab3_suite/
 
 ## Directories and files
 `testcase/`: contains python script `gen_testcase.py` for sample testcase generation  
