@@ -1,6 +1,6 @@
 # Overview 
 - **Contains: *A (fairly) optimised Parallelised Jacobi eigenvalue algorithm implementation in CUDA C, Sequential Jacobi eigenvalue algorithm implementation in C (for speedup computations)*** 
-- **Input Data: Works on Input matrices of dimensions M(#samples) x N(#features), N less or equal to 1024 (assuming GPU architecture used provides maximum BLOCK SIZE of 1024)**
+- **Input Data: Works on Input matrices of dimensions M*(#samples)* x N*(#features)* with N not exceeding 1024 (assuming GPU architecture used supports BLOCK SIZE of 1024)**
 - CUDA C file: *lab3_cuda.cu*
 - I/O: I/O format can be understood from the included header files and sample testcase files.
 - **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
