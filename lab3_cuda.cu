@@ -212,8 +212,6 @@ void s_compute_V(double **SIGMA, double *D_T, double **U, double **V_T, int N, i
     //first, multiply INV-SIGMA X U_T |=(NXP)
     double *product = (double *)malloc(sizeof(double) * N * P);
     s_multiply(INV_SIGMA, N, P, U_T, P, P, product);
-    //printf("first_product_s:\n");
-    //print_matrix(product, N, P, 1);
     //now, multiply product X D_T |=(NXN)
     s_multiply(product, N, P, D_T, P, N, *V_T);
     free(INV_SIGMA);
@@ -229,11 +227,9 @@ double s_matrix_similarity_fabs(double *M_1, int m, int n, double *M_2)
         for (int j = 0; j < n; j++)
         {
             l2_diff += (fabs(M_1[i * n + j]) - fabs(M_2[i * n + j])) * (fabs(M_1[i * n + j]) - fabs(M_2[i * n + j]));
-            //printf("%f ", l2_diff);
         }
     }
     l2_diff = sqrt(l2_diff);
-    //printf("L2-diff b/w matrices: %f\n", l2_diff);
     return l2_diff;
 }
 
@@ -246,11 +242,9 @@ double s_matrix_similarity(double *M_1, int m, int n, double *M_2)
         for (int j = 0; j < n; j++)
         {
             l2_diff += (M_1[i * n + j] - M_2[i * n + j]) * (M_1[i * n + j] - M_2[i * n + j]);
-            //printf("%f ", l2_diff);
         }
     }
     l2_diff = sqrt(l2_diff);
-    //printf("L2-diff b/w matrices: %f\n", l2_diff);
     return l2_diff;
 }
 
@@ -463,16 +457,14 @@ __global__ void kernel_col_update(int iter, double *device_A, double *device_X, 
 
 double compute_offset(double *A, int P)
 {
-    double sum = 0.0;// sum_2 = 0.0;
+    double sum = 0.0;
     for (int i = 0; i < P; i++)
     {
         for (int j = i + 1; j < P; j++)
         {
             sum += fabs(A[i * P + j]);
-            //sum_2 += fabs(A[j * P + i]);
         }
     }
-    //assert(fabs(sum_2 - sum) < 1e-3);
     return sum;
 }
 
@@ -491,7 +483,6 @@ double findmaxUT(double *A, int P)
 
 void GPU_multiply(double *d_A, const int rA, const int cA, double *d_B, const int rB, const int cB, double *d_C, int block_size)
 {
-    //printf("calling GPU_multiply\n");
     dim3 threads(block_size, block_size);
     int gridX, gridY;
     if (cB % threads.x==0)
@@ -530,7 +521,6 @@ void GPU_compute_V(double **SIGMA, double *d_D_T, double **U, double **V_T, int 
         INV_SIGMA[i*P+i] = 1.0/((*SIGMA)[i]);
     }
     gpuErrchk(cudaMallocHost((void**)&U_T, double_PP));
-    //s_transpose(*U, P, P, U_T);
 
     //first, multiply INV-SIGMA X U_T |=(NXP)
     double *d_INV_SIGMA, *d_U_T, *d_first_product;
@@ -589,11 +579,9 @@ void SVD_and_PCA(int N,
 
     size_t double_PP = sizeof(double)*P*P, double_NP = sizeof(double)*N*P;
 
-    //t1 = high_resolution_clock::now();
     double *D_T, *A, *eigenvectors, *eigenvectors_T; //host-side (pinnable memory)
     gpuErrchk(cudaMallocHost((void**)&D_T, double_NP));
     duration<double> time_span, time_span2;
-    //s_transpose(D, N, P, D_T);
     double *device_D_T;
     gpuErrchk(cudaMalloc((void **)&device_D_T, double_NP));
 
@@ -692,17 +680,13 @@ void SVD_and_PCA(int N,
     }
     
     //computing SIGMA:
-   //double *temp_sigma_ = (double *)calloc(P * N, sizeof(double));
     double sum_variance = 0.0;
     for (int i = 0; i < P; i++)
     {
         sum_variance+=eigenvalues[i];
         (*SIGMA)[i] = sqrt(eigenvalues[i]);
-      //temp_sigma_[i * N + i] = (*SIGMA)[i];
     }
-    //printf("sum evals_G:%f\n", sum_variance);
-    // printf("\n");
-    
+	
     //computing U:
     int index;
     for (int row = 0; row < P; row++)
