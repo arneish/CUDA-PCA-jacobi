@@ -13,6 +13,10 @@ using namespace std::chrono;
 #define MAX_SWEEPS 30
 #define MAX_ITER 10000000
 #define MULTIPLY_BLOCK_SIZE 64
+
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+
 #define gpuErrchk(ans)                        \
     {                                         \
         gpuAssert((ans), __FILE__, __LINE__); \
