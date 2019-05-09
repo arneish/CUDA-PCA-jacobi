@@ -362,7 +362,6 @@ __global__ void kernel_compute_all_chess_params(int P, int *device_IterBlockToEl
 
 __global__ void kernel_compute_params(double *device_A, int P, int iter, double *device_sine, double *device_cosine, int *device_IterBlockToElem)
 {
-    //NOTE: CHECKOUT CUDA OFFICIAL PAGE ON JACOBI (FAST HYPOTENUSE?)
     /*1 Block, P/2 threads: threadID t handles params for its alloted pair (for a particular device_iter)*/
     int localID = threadIdx.x;
     assert(localID < P / 2);
@@ -464,16 +463,16 @@ __global__ void kernel_col_update(int iter, double *device_A, double *device_X, 
 
 double compute_offset(double *A, int P)
 {
-    double sum = 0.0, sum_2 = 0.0;
+    double sum = 0.0;// sum_2 = 0.0;
     for (int i = 0; i < P; i++)
     {
         for (int j = i + 1; j < P; j++)
         {
             sum += fabs(A[i * P + j]);
-            sum_2 += fabs(A[j * P + i]);
+            //sum_2 += fabs(A[j * P + i]);
         }
     }
-    assert(fabs(sum_2 - sum) < 1e-3);
+    //assert(fabs(sum_2 - sum) < 1e-3);
     return sum;
 }
 
@@ -693,7 +692,6 @@ void SVD_and_PCA(int N,
     }
     
     //computing SIGMA:
-    
    //double *temp_sigma_ = (double *)calloc(P * N, sizeof(double));
     double sum_variance = 0.0;
     for (int i = 0; i < P; i++)
@@ -759,7 +757,7 @@ void SVD_and_PCA(int N,
     printf("TOTAL TIME:%f\n", time_span.count());    
     return;
 
-    /****************SERIAL JACOBI EIGENVALUE ALGORITHM:****************/
+    /****************SERIAL JACOBI EIGENVALUE ALGORITHM (can be used for Speedup Computation):****************/
     // t_begin = high_resolution_clock::now();
     // //begin Jacobi eigenvalue algorithm:
     // int state = P, num_iter = 0, m, k, l; //m: pivot row identifier
