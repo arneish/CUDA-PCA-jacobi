@@ -3,7 +3,7 @@
 - **Input Data: Works on Input matrices of dimensions M (#samples) x N (#features) with N not exceeding 1024 (assuming GPU architecture supports BLOCK SIZE of 1024)**
 - CUDA C file: *lab3_cuda.cu*
 - I/O: I/O format can be understood from the included header files and sample testcase files.
-- **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [2012, IEEE]***
+- **Primary Reference: *Novel GPU Implementation of Jacobi Algorithm for Karhunen-Loeve Transform of Dense Matrices (Mustafa U. Tamn, Onur Yilmaz, and Ali N. Akansu) [IEEE 2012]***
 - Wiki reference: https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm
 - All literature references used included in repository. 
 - Assignment attempted as a part of coursework requirements in *COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19)* (Instructor: Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
